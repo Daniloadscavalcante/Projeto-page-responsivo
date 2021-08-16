@@ -6,10 +6,15 @@ html{
 h1,h2,h3,h4,h5,h6{
     font-family: "Oxygen", arial;
 }
-.clearfix:after{
+.clearfix:after, .row:after{
     content: "";
     display: block;
     clear: both;
+}
+.maxwidth{
+    max-width: 1224px;
+    margin-left: auto;
+    margin-right: auto;
 }
 .button{
     display:inline-block;
@@ -21,6 +26,14 @@ h1,h2,h3,h4,h5,h6{
 }
 .button:hover{
     background-color: #37a0a0;
+}
+.icon-play{
+    height: 5em;
+    display:none    
+}
+.icon-play img{
+    max-width: 100%;
+    max-height: 100%;
 }
 .top-header{
     text-align: center;
@@ -126,6 +139,9 @@ h1,h2,h3,h4,h5,h6{
     .top-header-logo{
         float: left;
     }
+    .icon-play{
+        display: block;    
+    }
     .top-nav{
         background-color: transparent;
         float:right;
@@ -151,5 +167,45 @@ h1,h2,h3,h4,h5,h6{
     .top-content-title,.top-content-subtitle{        
         color:#fff;
     }
-    
+    .col-1_4{
+        width: 44%;
+        margin: 3%;
+        float: left;
+    }
+    .main-content-article .button{
+        float: right;
+    }
+}
+@media screen and (min-width:1000px){
+    .top-content{
+       /* background-color: #52a166;
+        background-image: url(../images/bg_topo_1198x670.jpg);*/
+        background:  #52a166 url(../images/bg_topo_1198x670.jpg); /*barckground é um atalho tanto pra cor como pra img url*/
+        background-repeat: no-repeat;    
+        background-position: center bottom;    
+        height: 20em;
+        padding-top: 17em;
+    }
+}
+@media screen and (min-width:1100px){
+    .top-content{
+        background-image: url(../images/bg_topo_1600x1374.jpg);
+        padding: 19em 20em 10em;
+        background-position: center top;
+    }
+    .icon-play{
+        height: 7em;
+    }
+    .col-1_4{
+        width: 23%;
+        margin: 1%;
+    }
+    .col-1_2{
+        width: 48%;
+        margin: 1%;
+        float: left;
+    }
+    .main-content-article .button{
+        float:none;
+    }
 }
